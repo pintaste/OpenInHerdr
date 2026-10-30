@@ -42,7 +42,8 @@ A minimal macOS Finder toolbar app that opens the current directory in [Herdr](h
 ### Build from source
 
 ```bash
-cd openinherdr
+git clone https://github.com/pintaste/OpenInHerdr.git
+cd OpenInHerdr
 xcodebuild -project OpenInHerdr.xcodeproj \
            -scheme OpenInHerdr \
            -configuration Release \
@@ -85,6 +86,7 @@ Use this section when installing, verifying, or debugging OpenInHerdr on a user'
 
 ```bash
 mdfind "kMDItemCFBundleIdentifier == 'dev.herdr.app'" | head -1   # Herdr present?
+git clone https://github.com/pintaste/OpenInHerdr.git && cd OpenInHerdr
 xcodebuild -version
 xcodebuild -project OpenInHerdr.xcodeproj -scheme OpenInHerdr \
            -configuration Release -derivedDataPath build build
@@ -154,7 +156,7 @@ Click toolbar icon
 ## Project Structure
 
 ```
-openinherdr/
+OpenInHerdr/
 ├── OpenInHerdr.xcodeproj/
 ├── OpenInHerdr/
 │   ├── main.swift                 # All app logic

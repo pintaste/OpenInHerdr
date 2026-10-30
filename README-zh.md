@@ -42,7 +42,8 @@
 ### 从源码编译
 
 ```bash
-cd openinherdr
+git clone https://github.com/pintaste/OpenInHerdr.git
+cd OpenInHerdr
 xcodebuild -project OpenInHerdr.xcodeproj \
            -scheme OpenInHerdr \
            -configuration Release \
@@ -85,6 +86,7 @@ tccutil reset AppleEvents com.local.OpenInHerdr
 
 ```bash
 mdfind "kMDItemCFBundleIdentifier == 'dev.herdr.app'" | head -1   # 有没有装 Herdr
+git clone https://github.com/pintaste/OpenInHerdr.git && cd OpenInHerdr
 xcodebuild -version
 xcodebuild -project OpenInHerdr.xcodeproj -scheme OpenInHerdr \
            -configuration Release -derivedDataPath build build
@@ -154,7 +156,7 @@ mkdir -p /tmp/oih-check
 ## 项目结构
 
 ```
-openinherdr/
+OpenInHerdr/
 ├── OpenInHerdr.xcodeproj/
 ├── OpenInHerdr/
 │   ├── main.swift                 # 全部逻辑
